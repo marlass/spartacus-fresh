@@ -1,0 +1,11 @@
+{
+  "git": {
+    "requireCleanWorkingDir": false
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "releaseNotes": "cd ../.. && npm run --silent release-notes:styles -- --from ${latestVersion} --to ${version}"
+  }
+}
