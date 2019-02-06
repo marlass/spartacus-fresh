@@ -72,7 +72,7 @@ export const packages: PackageMap = packageJsonPaths.reduce(
       packageJson,
       version: packageJson.version || '0.0.0'
     };
-
+    console.log(projectPackages);
     return projectPackages;
   },
   {}

@@ -110,7 +110,7 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
 
       // Check if we need to edit or create a new one.
       return ghGot(
-        'repos/marlass/cloud-commerce-spartacus-storefront/releases'
+        'repos/marlass/spartacus-fresh/releases'
       ).then((x: JsonObject) => [x, markdown]);
     })
     .then(([body, markdown]) => {
@@ -124,7 +124,7 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
       };
 
       return ghGot(
-        'repos/marlass/cloud-commerce-spartacus-storefront/releases' + id,
+        'repos/marlass/spartacus-fresh/releases' + id,
         {
           body: {
             body: markdown,
