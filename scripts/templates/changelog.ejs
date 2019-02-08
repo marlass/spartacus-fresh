@@ -65,9 +65,11 @@
 %>
 <% if (scope === library || !library) { %>
 
-  <tr><td colspan=3><%= scope %><h3><%
+  <tr><td colspan=3><h3><%
     if (scope && packages[scope]) {
       %><%= scope %> (<%= packages[scope].version %>)<%
+    } else if (scope) {
+      %><%= scope %><%
     } else {
       %>Misc<%
     }
