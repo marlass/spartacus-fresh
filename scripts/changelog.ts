@@ -109,9 +109,9 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
       }
 
       // Check if we need to edit or create a new one.
-      return ghGot(
-        'repos/marlass/spartacus-fresh/releases'
-      ).then((x: JsonObject) => [x, markdown]);
+      return ghGot('repos/marlass/spartacus-fresh/releases').then(
+        (x: JsonObject) => [x, markdown]
+      );
     })
     .then(([body, markdown]) => {
       const json = body.body;
@@ -123,20 +123,17 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
         prerelease: ''
       };
 
-      return ghGot(
-        'repos/marlass/spartacus-fresh/releases' + id,
-        {
-          body: {
-            body: markdown,
-            draft: true,
-            name: args.to,
-            prerelease: semversion.prerelease.length > 0,
-            tag_name: args.to,
-            ...(toSha ? { target_commitish: toSha } : {})
-          },
-          token: githubToken
-        }
-      );
+      return ghGot('repos/marlass/spartacus-fresh/releases' + id, {
+        body: {
+          body: markdown,
+          draft: true,
+          name: args.to,
+          prerelease: semversion.prerelease.length > 0,
+          tag_name: args.to,
+          ...(toSha ? { target_commitish: toSha } : {})
+        },
+        token: githubToken
+      });
     });
 }
 
@@ -178,19 +175,19 @@ if (typeof config.from === 'undefined') {
 } else if (typeof config.library === 'string') {
   switch (config.library) {
     case 'core':
-    case '@spartacus/core':
-      config.library = '@marlass/spartacus-core';
+    case '@marlas/spartacus-core':
+      config.library = '@marlas/spartacus-core';
       break;
     case 'storefrontlib':
     case 'storefront':
-    case '@spartacus/storefront':
-    case '@spartacus/storefrontlib':
-      config.library = '@marlass/spartacus-storefront';
+    case '@marlas/spartacus-storefront':
+    case '@marlas/spartacus-storefrontlib':
+      config.library = '@marlas/spartacus-storefront';
       break;
     case 'styles':
-    case '@spartacus/styles':
+    case '@marlas/spartacus-styles':
     case 'storefrontstyles':
-      config.library = '@marlass/spartacus-styles';
+      config.library = '@marlas/spartacus-styles';
       break;
     default:
       config.library = undefined;
