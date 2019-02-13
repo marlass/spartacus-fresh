@@ -29,11 +29,16 @@
     "test:storefront:lib": "ng test storefrontlib --sourceMap --code-coverage",
     "build:ssr": "ng run storefrontapp:server && webpack --config projects/ssr/webpack.server.config.js --progress --colors",
     "start:ssr": "node dist/ssr/server",
-    "release-styles": "cd projects/storefrontstyles && release-it --dry-run && cd ../..",
-    "release-lib": "cd projects/storefrontlib && release-it && cd ../..",
-    "release-notes:lib": "ts-node ./scripts/changelog.ts --verbose --lib storefrontlib",
+    "release:styles": "cd projects/storefrontstyles && release-it && cd ../..",
+    "release:lib": "cd projects/storefrontlib && release-it && cd ../..",
+    "release:core": "cd projects/core && release-it && cd ../..",
+    "release-with-changelog:styles": "cd projects/storefrontstyles && release-it --config .release-it.changelog.json && cd ../..",
+    "release-with-changelog:lib": "cd projects/storefrontlib && release-it --config .release-it.changelog.json && cd ../..",
+    "release-with-changelog:core": "cd projects/core && release-it --config .release-it.changelog.json && cd ../..",
+    "release:all": "npm run release:styles && npm run release:lib && npm run release:core",
+    "release-notes:lib": "ts-node ./scripts/changelog.ts --verbose --lib storefront",
     "release-notes:core": "ts-node ./scripts/changelog.ts --verbose --lib core",
-    "release-notes:styles": "ts-node ./scripts/changelog.ts --verbose"
+    "release-notes:styles": "ts-node ./scripts/changelog.ts --verbose --lib styles"
   },
   "private": false,
   "dependencies": {
