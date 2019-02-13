@@ -1,0 +1,13 @@
+{
+  "git": {
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false
+  },
+  "npm": {
+    "publish": true,
+    "publishPath": "./../../dist/core"
+  },
+  "scripts": {
+    "afterBump": "cd ../.. && yarn build:core:lib"
+  }
+}
