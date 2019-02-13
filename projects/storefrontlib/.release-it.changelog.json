@@ -13,6 +13,7 @@
   },
   "github": {
     "release": true,
+    "releaseName": "@marlas/spartacus-storefront@${version}",
     "releaseNotes": "cd ../../ && npm run --silent release-notes:lib -- --from storefront-${latestVersion} --to storefront-${version}"
   }
 }
