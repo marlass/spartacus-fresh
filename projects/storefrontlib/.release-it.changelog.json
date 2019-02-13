@@ -1,7 +1,8 @@
 {
   "git": {
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "tagName": "storefront-${version}"
   },
   "npm": {
     "publish": true,
@@ -12,6 +13,6 @@
   },
   "github": {
     "release": true,
-    "releaseNotes": "cd ../.. && npm run --silent release-notes:storefront -- --from ${latestVersion} --to ${version}"
+    "releaseNotes": "cd ../.. && npm run --silent release-notes:storefront -- --from storefront-${latestVersion} --to storefront-${version}"
   }
 }

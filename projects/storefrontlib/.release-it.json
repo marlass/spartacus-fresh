@@ -1,7 +1,8 @@
 {
   "git": {
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "tagName": "storefront-${version}"
   },
   "npm": {
     "publish": true,
