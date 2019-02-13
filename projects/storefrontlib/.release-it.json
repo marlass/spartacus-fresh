@@ -1,14 +1,11 @@
 {
   "git": {
-    "requireCleanWorkingDir": false
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false
   },
   "npm": {
     "publish": true,
-    "tag": "test",
     "publishPath": "./../../dist/storefrontlib"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "afterBump": "cd ../.. && yarn build:core:lib"
