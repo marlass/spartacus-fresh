@@ -1,7 +1,10 @@
 {
   "git": {
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "tagName": "core-${version}",
+    "commitMessage": "Release core-${version}",
+    "tagAnnotation": "Release core-${version}"
   },
   "npm": {
     "publish": true,
@@ -12,6 +15,7 @@
   },
   "github": {
     "release": true,
-    "releaseNotes": "cd ../.. && npm run --silent release-notes:core -- --from ${latestVersion} --to ${version}"
+    "releaseName": "@marlas/spartacus-core@${version}",
+    "releaseNotes": "cd ../.. && npm run --silent release-notes:core -- --from core-${latestVersion} --to core-${version}"
   }
 }

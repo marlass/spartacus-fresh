@@ -1,7 +1,10 @@
 {
   "git": {
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "tagName": "core-${version}",
+    "commitMessage": "Release core-${version}",
+    "tagAnnotation": "Release core-${version}"
   },
   "npm": {
     "publish": true,
