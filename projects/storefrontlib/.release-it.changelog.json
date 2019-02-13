@@ -2,7 +2,9 @@
   "git": {
     "requireCleanWorkingDir": false,
     "requireUpstream": false,
-    "tagName": "storefront-${version}"
+    "tagName": "storefront-${version}",
+    "commitMessage": "Release storefront-${version}",
+    "tagAnnotation": "Release storefront-${version}"
   },
   "npm": {
     "publish": true,
