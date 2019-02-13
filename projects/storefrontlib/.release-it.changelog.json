@@ -13,6 +13,6 @@
   },
   "github": {
     "release": true,
-    "releaseNotes": "cd ../.. && npm run --silent release-notes:storefront -- --from storefront-${latestVersion} --to storefront-${version}"
+    "releaseNotes": "cd ../../ && npm run --silent release-notes:lib -- --from storefront-${latestVersion} --to storefront-${version}"
   }
 }
