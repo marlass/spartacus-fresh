@@ -1,6 +1,6 @@
 {
   "git": {
-    "requireCleanWorkingDir": false,
+    "requireCleanWorkingDir": true,
     "requireUpstream": false,
     "tagName": "styles-${version}",
     "commitMessage": "Release styles-${version}",

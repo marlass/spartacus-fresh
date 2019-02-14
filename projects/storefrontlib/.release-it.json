@@ -1,6 +1,6 @@
 {
   "git": {
-    "requireCleanWorkingDir": false,
+    "requireCleanWorkingDir": true,
     "requireUpstream": false,
     "tagName": "storefront-${version}",
     "commitMessage": "Release storefront-${version}",
