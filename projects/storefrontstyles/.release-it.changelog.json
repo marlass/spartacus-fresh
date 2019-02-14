@@ -1,0 +1,17 @@
+{
+  "git": {
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false,
+    "tagName": "styles-${version}",
+    "commitMessage": "Release styles-${version}",
+    "tagAnnotation": "Release styles-${version}"
+  },
+  "npm": {
+    "publish": true
+  },
+  "github": {
+    "release": true,
+    "releaseName": "@marlas/spartacus-styles@${version}",
+    "releaseNotes": "cd ../.. && npm run --silent release-notes:styles -- --from styles-${latestVersion} --to styles-${version}"
+  }
+}
