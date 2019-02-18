@@ -63,9 +63,9 @@
         continue;
     }
 %>
-<% if (scope === library || !library) { %>
+<!-- <% if (scope === library || !library) { %> -->
 
-  <tr><td colspan=3><h3><%
+  <!-- <tr><td colspan=3><h3><%
     if (scope && packages[scope]) {
       %><%= scope %> (<%= packages[scope].version %>)<%
     } else if (scope) {
@@ -73,7 +73,7 @@
     } else {
       %>Misc<%
     }
-  %></h3></td></tr>
+  %></h3></td></tr> -->
     <tr>
       <td><b>Commit</b>
       <td><b>Description</b>
@@ -93,7 +93,7 @@
         <tr></tr>
       <% } %>
   <% } %>
-<% } %>
+<!-- <% } %> -->
 </tbody>
 </table>
 ----

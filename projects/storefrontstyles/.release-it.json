@@ -7,7 +7,8 @@
     "tagAnnotation": "Release styles-${version}"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "tag": "next"
   },
   "github": {}
 }

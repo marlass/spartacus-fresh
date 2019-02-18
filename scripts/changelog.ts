@@ -37,10 +37,17 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
     ''
   ).trim();
 
+  const libraryPaths = {
+    storefront: './projects/storefrontlib/',
+    core: './projects/core',
+    styles: './projects/storefrontstyles'
+  };
+
   return new Promise(resolve => {
     (gitRawCommits({
       from: args.from,
       to: args.to || 'HEAD',
+      path: args.library ? libraryPaths[args.library] : '.',
       format:
         '%B%n-hash-%n%H%n-gitTags-%n%D%n-committerDate-%n%ci%n-authorName-%n%aN%n'
     }) as NodeJS.ReadStream)

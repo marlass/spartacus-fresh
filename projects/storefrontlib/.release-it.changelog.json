@@ -8,7 +8,8 @@
   },
   "npm": {
     "publish": true,
-    "publishPath": "./../../dist/storefrontlib"
+    "publishPath": "./../../dist/storefrontlib",
+    "tag": "next"
   },
   "scripts": {
     "afterBump": "cd ../.. && yarn build:core:lib"
