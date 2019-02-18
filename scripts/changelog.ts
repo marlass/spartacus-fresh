@@ -38,9 +38,9 @@ export default function run(args: ChangelogOptions, logger: logging.Logger) {
   ).trim();
 
   const libraryPaths = {
-    storefront: './projects/storefrontlib/',
-    core: './projects/core',
-    styles: './projects/storefrontstyles'
+    '@marlas/spartacus-storefront': './projects/storefrontlib/',
+    '@marlas/spartacus-core': './projects/core',
+    '@marlas/spartacus-styles': './projects/storefrontstyles'
   };
 
   return new Promise(resolve => {
